@@ -1,0 +1,1 @@
+web: gunicorn fwhwork.wsgi --log-file -
