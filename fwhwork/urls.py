@@ -20,13 +20,13 @@ from django.contrib.staticfiles.urls import static
 
 urlpatterns = [
 
-    path('admin/', admin.site.urls),
-    path('', include('base.urls')),
-    path('ba/', include('base_asset.urls')),
+                  path('admin/', admin.site.urls),
+                  path('', include('base.urls')),
+                  path('summernote/', include('django_summernote.urls')),
+                  path('artfwh/', include('artfwh.urls')),
 
-]+ static(settings.MEDIA_URL, document_root= settings.MEDIA_ROOT)#
-              # + static(settings.STATIC_URL, document_root=settings.STATICFILES_DIRS)
-
+              ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)  #
+# + static(settings.STATIC_URL, document_root=settings.STATICFILES_DIRS)
 
 
 # if settings.DEBUG:
