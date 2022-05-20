@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="description" content="{% block meta_description %}歴史とClassicに関する、自分用のノートです。{% endblock %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'artfwh/css/artfwhTop_layout.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'artfwh/image' %}">
+</head>
+<body style="background-color: cyan">
+<div id="container">
+    <div id="itemA" style="background-image: url('{% static "artfwh/image/IMG_0145.jpg" %}');">
+        IMGPIC
+    </div>
+    <div id="itemB" style="background-color:#fa8798;">
+        <h1> F W H </h1>
+    </div>
+    <div id="itemC" style="background-color:#fa87d9;">
+        <div id="itemc1">
+            <div style="width:200px;">
+                MAINNAV
+            </div>
+            <div style="width:200px;">
+                <a href='https://soens.herokuapp.com/'>装苑Main</a>
+            </div>
+            <div style="width:200px;">
+                <a href='https://basebasebase.herokuapp.com/'>Basebasebase</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="container2">
+    <div id="itemD" style="background-color:#878dfa;">
+        nav_A<br><br>
+        {% for about in about %}
+            <ul style="list-style-type: none; padding:0px;">
+                <li>
+                    <a href="{% url 'artfwh:about' about_id=about.id %}">{{ about.title.era }}</a>
+                </li>
+            </ul>
+        {% endfor %}
+
+    </div>
+    <div id="itemE" style="background-color:#b5fa87;">
+        <h1>Content_A_Card</h1>
+    </div>
+    <div id="itemF" style="background-color:#eee20c;">
+        <h3>Content_B_Card</h3>
+    </div>
+    <div id="itemG" style="background-color:#0ceeaa;">Content_C_Card</div>
+    <div id="itemH" style="background-color:#0c41ee;">Content_D_Card</div>
+    <div id="itemI" style="background-color:#0ceeaa;">sideB</div>
+</div>
+<div id="container3">
+    <div id="itemJ" style="background-color:#0c41ee;">footer</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,10 @@
+{% extends 'base/base_base.html' %}
+{% load static %}
+{% block main %}
+    <main>
+        <img src="{% static 'base/img/IMG_0145.png' %}" alt="thailand">
+        <h2>It's ThaiLand!</h2>
+        <br>
+        <a href="{% url 'artfwh:artTop' %}">ArtTop</a>
+    </main>
+{% endblock %}

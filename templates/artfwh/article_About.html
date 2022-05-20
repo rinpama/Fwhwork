@@ -1,0 +1,32 @@
+{% extends 'artfwh/articles_about_base.html' %}
+{% load static %}
+
+{% block navA %}
+    {% for abou in Abou %}
+        <ul style="list-style-type: none; padding:0px;">
+            <li>
+                <a href="{% url 'artfwh:about' about_id=abou.id %}">{{ abou.title.era }}</a>
+            </li>
+        </ul>
+    {% endfor %}
+    <hr>
+    <hr>
+    <a href="{% url 'artfwh:about2' number=about.id %}">CLASSIC</a>
+{% endblock %}
+
+
+{% block mainA %}
+    {{ about.title }}
+    {{ about.text | safe }}
+{% endblock %}
+
+
+{% block mainB %}
+    {{ about.id }}
+    {{ about.textMore | safe }}
+{% endblock %}
+
+{% block mainC %}
+    {{ about.id }}
+    {{ about.ArtText | safe }}
+{% endblock %}

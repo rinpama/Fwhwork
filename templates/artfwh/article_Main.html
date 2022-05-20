@@ -1,0 +1,10 @@
+{% extends 'artfwh/articles_main_base.html' %}
+{% load static %}
+
+{% block main %}
+    <h1>{{ article.title }}</h1>
+    <p>{{ article.updated_at }}</p>
+    {{ article.text | safe }}
+    <hr/>
+    <br>
+{% endblock %}

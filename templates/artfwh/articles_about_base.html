@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title> FWH about</title>
+    <meta name="description" content="{% block meta_description %}歴史とClassicの全体の流れに関する、自分用のノートです。{% endblock %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'artfwh/css/artfwhAbout_layout.css' %}">
+</head>
+
+<body style="background-color: cyan">
+
+<div id="container4"> <!-- コンテナ -->
+    <div id="itemA"
+         style="background-image: url('{% static " artfwh/image/img_1.png" %}'); background-size: 200px 100px;">
+        IMGPIC
+    </div>
+    <div id="itemB" style="background-color:#fa8798;">
+        <h1> F W H </h1>
+    </div>
+
+    <div id="itemC">
+        MAINNAV
+    </div>
+</div>
+
+<div id="container5"> <!-- コンテナ -->
+    <div id="itemD">
+        navA<br>
+        {% block navA %}{% endblock %}
+    </div>
+    <div id="itemE">
+        mainA<br>
+        {% block mainA %}{% endblock %}
+    </div>
+    <div id="itemF">
+        mainB<br>
+        {% block mainB %}{% endblock %}
+    </div>
+    <div id="itemFdash">
+        mainC<br>
+        {% block mainC %}{% endblock %}
+    </div>
+    <div id="itemG">
+        sideB
+    </div>
+</div>
+
+<div id="container6"> <!-- コンテナ -->
+    <div id="itemH">
+        footer<br>
+        <a href="{% url 'artfwh:artTop' %}">Top</a>
+    </div> <!-- アイテム -->
+</div>
+
+
+</body>
+</html>
